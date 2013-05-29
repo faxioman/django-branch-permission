@@ -6,6 +6,18 @@ from django.core.urlresolvers import reverse
 
 
 class ModelPermissionAdmin(object):
+    fieldsets = ()
+
+    def __init__(self, *args, **kwargs):
+        super(ModelPermissionAdmin, self).__init__(*args, **kwargs)
+        if self.fieldsets:
+            self.fieldsets += (
+              ('Branch permissions',
+               {
+                   'fields': ('owner', 'sites', 'is_published',),
+                   'classes': ('collapse',),
+               }),
+              )
 
     @property
     def media(self):
