@@ -6,5 +6,4 @@ setup(
     packages=['branch-permission'],
     license='LGPL',
     long_description=open('README.txt').read(),
-    requires=['Django>=1.5']
 )
