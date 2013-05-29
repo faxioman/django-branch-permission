@@ -1,0 +1,1 @@
+Django app extending permission for headquarter/branches site
